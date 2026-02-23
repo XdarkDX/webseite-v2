@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "name": "Meine Linkseite",
+    "bio": "Willkommen auf meiner Seite.",
+    "avatarUrl": "",
+    "logoUrl": "",
+    "footerText": "Danke fürs Vorbeischauen.",
+    "theme": {
+      "accent": "#3b82f6",
+      "background": "navyGradient"
+    }
+  },
+  "links": [],
+  "adminUsers": []
+}

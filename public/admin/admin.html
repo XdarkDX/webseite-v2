@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+  </head>
+  <body>
+    <main class="dashboard fade-slide-in">
+      <header class="topbar panel">
+        <h1>Dashboard</h1>
+        <div class="actions">
+          <button id="logoutBtn" class="btn-ghost">Logout</button>
+          <a href="/" class="btn-ghost">Öffentliche Seite</a>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>Profil</h2>
+        <div class="grid-two">
+          <label>Name<input id="nameInput" type="text" maxlength="80" /></label>
+          <label>Footer Text<input id="footerInput" type="text" maxlength="140" /></label>
+        </div>
+        <label>Bio<textarea id="bioInput" maxlength="280"></textarea></label>
+
+        <div class="grid-two">
+          <label>Accent-Farbe<input id="accentInput" type="color" value="#3b82f6" /></label>
+          <label>Theme<input value="navyGradient" disabled /></label>
+        </div>
+
+        <div class="upload-row">
+          <label>Avatar Upload<input id="avatarUpload" type="file" accept="image/png,image/jpeg,image/webp" /></label>
+          <label>Logo Upload<input id="logoUpload" type="file" accept="image/png,image/jpeg,image/webp" /></label>
+        </div>
+
+        <button id="saveProfileBtn" class="btn-primary">Profil speichern</button>
+      </section>
+
+      <section class="panel">
+        <h2>Links</h2>
+        <form id="linkForm" class="link-form">
+          <input id="linkTitle" placeholder="Titel" maxlength="60" required />
+          <input id="linkSubtitle" placeholder="Untertitel (optional)" maxlength="120" />
+          <input id="linkUrl" placeholder="https://..." required />
+          <label class="check"><input id="linkActive" type="checkbox" checked /> Aktiv</label>
+          <label class="check"><input id="linkFeatured" type="checkbox" /> Featured</label>
+          <button class="btn-primary" type="submit">Link hinzufügen</button>
+        </form>
+
+        <div id="linksList" class="link-admin-list"></div>
+        <div class="buttons-row">
+          <button id="saveLinksBtn" class="btn-primary">Links speichern</button>
+          <button id="cancelLinksBtn" class="btn-ghost">Zurücksetzen</button>
+        </div>
+      </section>
+
+      <div id="toast" class="toast"></div>
+    </main>
+
+    <script src="/admin/admin.js" defer></script>
+  </body>
+</html>
